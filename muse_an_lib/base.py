@@ -68,9 +68,19 @@ class Validate:
         :param museInput: Output from the muse headset
         :type museInput: [[x, [y,z]],[x, [y,z]]]
         
-        :param channel: Which channels to use
+        :param channel: Which channels to use, index 0
         :type channel: lst
 
         :return: list of the values
         :rtype: list
         """
+        lst = []
+        
+        for i in range(len(museInput)):
+            x_lst = []
+            for cnl in channel:
+                x_lst.append(museInput[i][1][cnl])
+            lst.append(x_lst)
+
+
+        return lst 
