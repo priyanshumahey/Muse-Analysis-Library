@@ -27,5 +27,50 @@ class Validate:
         
         return val
 
+    def TimeStamp(museInput):
+        """
+        Returns the timestamps of the data
 
+        :param museInput: Output from the muse headset
+        :type museInput: [[x, [y,z]],[x, [y,z]]]
+
+        :return: list of the timestamps
+        :rtype: list
+        """
+        lst = []
         
+        for i in range(len(museInput)):
+            lst.append(museInput[i][0])
+
+        return lst 
+    
+    def Values(museInput):
+        """
+        Returns the timestamps of the data
+
+        :param museInput: Output from the muse headset
+        :type museInput: [[x, [y,z]],[x, [y,z]]]
+
+        :return: list of the values
+        :rtype: list
+        """
+        lst = []
+        
+        for i in range(len(museInput)):
+            lst.append(museInput[i][1])
+
+        return lst 
+
+    def ValuesSpecific(museInput, channel):
+        """
+        Returns the timestamps of the data
+
+        :param museInput: Output from the muse headset
+        :type museInput: [[x, [y,z]],[x, [y,z]]]
+        
+        :param channel: Which channels to use
+        :type channel: lst
+
+        :return: list of the values
+        :rtype: list
+        """
