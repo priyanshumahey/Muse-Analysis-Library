@@ -2,8 +2,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='muse_an_lib',
-    version='0.5',
+    name='muse_an_libr',
+    version='0.6',
     license='MIT',
     author="Priyanshu Mahey",
     author_email='priyanshu.mahey@yahoo.com',
