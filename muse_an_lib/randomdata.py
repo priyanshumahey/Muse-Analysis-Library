@@ -1,4 +1,6 @@
 from numpy import random
+import numpy as np
+
 
 class RandomData:
     """
@@ -40,7 +42,7 @@ class RandomData:
         :param length: Length of the dataset
         :type length: int
         
-        :param channels: Amount of desired channels
+        :param channels: Amount of desired channels 
         :type channels: int
 
         :return: list of length length with desired number of channels
@@ -51,3 +53,13 @@ class RandomData:
             ap = [i+1, (random.rand(1, channels) * 80).tolist()]
             result.append(ap)
         return result
+    
+    def sig_gen(sec, sig_freq, sig_amp, noise_freq, noise_amp):
+        time = np.linspace(0, sec, 1000, endpoint=True)
+
+        signal = sig_amp*np.sin(2*np.pi*sig_freq*time)
+        noise = noise_amp*np.sin(2*np.pi*noise_freq*time)
+
+        signal_noise = signal + noise
+
+        return signal_noise
