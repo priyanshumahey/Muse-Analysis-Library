@@ -1,4 +1,4 @@
-# Muse-Analysis-Library
+# Muse-Analysis-Library (old test version, do not use!)
 This is a library built for analaysis of a specific set of signal data.
 To use the code, read through the documentation to learn more. This is simply an early library and will be updated much more later on.
 
